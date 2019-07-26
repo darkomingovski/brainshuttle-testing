@@ -1,0 +1,72 @@
+.ChatBox {
+    grid-area: chatBox;
+    height: 658px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: scroll;
+    border-left: 0.5px solid rgba(186, 186, 186, 1);
+}
+
+.ChatBox {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.ChatBox::-webkit-scrollbar { 
+    display: none;
+}
+
+.ChatBoxMessage {
+    display: grid;
+    grid-template-areas: 'author author author author''content content content content''. seen check time';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 840px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    margin: 10px 26px;
+}
+
+.ChatBoxAuthor {
+    grid-area: author;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0 0 16px;
+}
+
+.ChatBoxContent {
+    grid-area: content;
+    font-size: 15px;
+    margin: 2px 18px 0 10px;
+}
+
+.ChatBoxSeen {
+    grid-area: seen;
+    margin: 2px 0 2px 735px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.ChatBoxCheckMark {
+    grid-area: check;
+    position: relative;
+    font-size: 13px;
+    margin: 2px 0 2px 5px;
+}
+
+.ChatBoxCheckMark :first-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.ChatBoxCheckMark :last-child {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+.ChatBoxTime {
+    grid-area: time;
+    font-size: 13px;
+    margin: 2px 9px;
+}

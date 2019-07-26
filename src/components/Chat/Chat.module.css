@@ -1,0 +1,13 @@
+.ChatGridContainer {
+    display: grid;
+    grid-template-areas: 'newMessage header'
+                         'newMessage chatBox'
+                         'searchContacts chatBox'
+                         'contactList chatBox'
+                         'contactList inputMessageBox';
+    grid-template-columns: 300px 1066px;
+    grid-template-rows: 60px 60px 40px 558px 50px;
+    width: 1366px;
+    height: 768px;
+    border: 0.5px solid rgba(186, 186, 186, 1);
+}
